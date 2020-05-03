@@ -1,0 +1,40 @@
+@import "./variables";
+
+header {
+  position: absolute;
+  width: 100%;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.35) 50%,
+    rgba(0, 0, 0, 0.52) 100%
+  );
+  .header-container {
+    display: flex;
+    width: 80%;
+    margin: 37px auto 45px;
+    color: #fff;
+    justify-content: space-between;
+  }
+  a {
+    color: $text_color;
+  }
+  .container-logo {
+    a {
+      font-size: 32px;
+      color: #fff;
+    }
+  }
+  .menu-link {
+    font-size: 15px;
+    margin-right: 38px;
+  }
+  .container-menu {
+    display: flex;
+    align-items: center;
+  }
+  .search img {
+    height: 23px;
+  }
+}

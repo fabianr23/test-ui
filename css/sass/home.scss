@@ -1,0 +1,193 @@
+@import "./variables";
+
+.large-thumb {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  &__card {
+    position: absolute;
+    width: 500px;
+    left: 10%;
+    top: 50%;
+    transform: translate(0, -40%);
+  }
+  .blurred-container {
+    padding: 50px 30px 5px;
+    position: relative;
+    p {
+      font-size: 21px;
+      color: $text_color;
+      max-width: 400px;
+      font-weight: 300;
+      &.bold {
+        font-weight: 700;
+        color: #fff;
+      }
+    }
+  }
+  .blurred-layout-bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(95, 95, 95, 0.6);
+    backdrop-filter: blur(18px);
+    z-index: -1;
+    top: 0;
+    left: 0;
+  }
+  .icon-link {
+    font-size: 14px;
+    font-weight: 300;
+    text-decoration: underline;
+    color: $text_color;
+    padding-left: 21px;
+    background: left center no-repeat;
+    background-image: url(../images/wiki.svg);
+  }
+  .large-thumb__thumbs {
+    display: flex;
+  }
+  .thumbs-up {
+    width: 50%;
+    text-align: center;
+    padding: 15px 0;
+    background: rgba(27, 187, 179, 0.9);
+  }
+  .thumbs-down {
+    width: 50%;
+    text-align: center;
+    padding: 15px 0;
+    background: rgba(255, 173, 29, 0.9);
+  }
+  .counting-down {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    height: 50px;
+    &__closing {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: calc(33% - 10px);
+      font-size: 13px;
+      font-weight: 400;
+      color: #fff;
+      text-transform: uppercase;
+      padding-right: 10px;
+      background-color: rgba(111, 111, 111, 0.3);
+      padding-top: 3px;
+      &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        position: absolute;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-left: 8px solid rgba(0, 0, 0, 0.3);
+        right: -8px;
+        top: 18px;
+      }
+    }
+    &__days {
+      display: flex;
+      align-items: center;
+      width: 67%;
+      color: $text_color_black;
+      font-size: 36px;
+      font-weight: 400;
+      padding-left: 15px;
+      background-color: rgba(255, 255, 255, 0.7);
+      span {
+        margin: 0 10px;
+        color: $text_color_black_opacity;
+      }
+    }
+  }
+}
+
+.advisement {
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
+  background-color: #ebebeb;
+  &.internal-layout {
+    margin-top: 25px;
+  }
+  h2 {
+    color: rgba(70, 70, 70, 0.75);
+    font-size: 20px;
+    font-weight: 300;
+    min-width: 210px;
+    margin-left: 20px;
+    span {
+      color: $text_color_black;
+      font-size: 37px;
+      display: block;
+    }
+  }
+  p {
+    font-size: 15px;
+    line-height: 23px;
+    font-weight: 300;
+    color: $text_color_black_opacity;
+  }
+  .close-btn {
+    width: 80px;
+    text-align: right;
+    margin-right: 30px;
+  }
+}
+
+.votes {
+  &.internal-layout {
+    margin-top: 25px;
+  }
+  h2 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 300;
+    color: $text_color_black;
+  }
+}
+
+.request-new-add {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: url("../images/addNewBg.png") center no-repeat;
+  background-size: cover;
+  &.internal-layout {
+    margin-bottom: 30px;
+  }
+  p {
+    font-size: 30px;
+    color: $text_color_black;
+    line-height: 24px;
+    font-weight: 300;
+    margin-left: 20px;
+    z-index: 2;
+  }
+  .submit {
+    margin-right: 20px;
+    z-index: 2;
+    span {
+      font-size: 20px;
+      line-height: 24px;
+      padding: 12px 30px;
+      cursor: pointer;
+      color: $text_color_black;
+      border: 2px solid $text_color_black;
+    }
+  }
+  .bg-layout {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.85);
+    z-index: 1;
+  }
+}
