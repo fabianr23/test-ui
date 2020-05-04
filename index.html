@@ -4,6 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <title>Rule of Thumb</title>
+    <meta name="viewport" content="width=device-width,user-scalable=no" />
     <meta
       name="description"
       content="Use thumbs to give your opinion about people opinions around the world"
@@ -98,7 +99,9 @@
         <h2>
           Votes
         </h2>
-        <section class="cards-container" id="cards-section"></section>
+        <section class="cards-container" id="cards-section">
+          <votes-cards />
+        </section>
       </section>
       <section class="request-new-add internal-layout">
         <div class="bg-layout"></div>
@@ -130,6 +133,9 @@
         </a>
       </div>
       <script src="js/custom.js"></script>
+      <!-- can´t use type module without a server because CORS -->
+      <!-- <script type="module" src="components/votes-cards.js"></script> -->
+      <script src="components/votes-cards/votes-cards.js"></script>
     </footer>
   </body>
 </html>
